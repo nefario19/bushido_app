@@ -10,4 +10,3 @@ class BushidoApp extends StatelessWidget {
     return const MaterialApp();
   }
 }
-
