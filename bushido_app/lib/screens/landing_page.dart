@@ -40,6 +40,8 @@ class _LandingPageState extends State<LandingPage> {
         elevation: 0,
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[500],
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         onTap: _onItemTapped,
       ),
     );
