@@ -5,8 +5,11 @@ class MembersPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Center(child: Text('Members')),
+      ),
+      body: const Center(
         child: Text('Members Page'),
       ),
     );

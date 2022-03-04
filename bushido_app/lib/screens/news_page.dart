@@ -1,3 +1,4 @@
+import 'package:bushido_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class NewsPage extends StatelessWidget {
@@ -5,9 +6,18 @@ class NewsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text('News Page'),
+    return MaterialApp(
+      theme: mainTheme,
+      title: 'NewsPage',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Center(
+            child: Text('News'),
+          ),
+        ),
+        body: const Center(
+          child: Text('News Page'),
+        ),
       ),
     );
   }
