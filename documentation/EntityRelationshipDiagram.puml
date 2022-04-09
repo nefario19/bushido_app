@@ -1,0 +1,89 @@
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity trainingCenter {
+    id : int <<generated>>,
+    name : string,
+    address: string,
+    postalCode: string,
+    City: string
+}
+
+entity trainingCenterDiscipline <<link table>>
+{
+    trainingCenterId: int,
+    disciplineId: int
+}
+
+entity discipline {
+    id : int <<generated>>,
+    name : string
+}
+
+entity activityArticle {
+    id : int <<generated>>,
+    name : string,
+    startDate: dateTime,
+    endDate: dateTime,
+    articleId: int
+}
+
+entity article {
+    id: int <<generated>>,
+    title: string,
+    body: string,
+    excerpt: string,
+    trainingCenterId: int,
+    memberId: int
+}
+
+entity newsArticle {
+    id: int <<generated>>,
+    publishDate: dateTime,
+    articleId: int
+}
+
+entity user {
+    id: int <<generated>>,
+    fullName: string,
+    email: string,
+    password: string
+}
+
+entity member {
+    id: int <<generated>>,
+    userId: int,
+    role: int,
+    trainingCenterId: int
+}
+
+entity achievement {
+    id: int <<generated>>,
+    memberId: int,
+    trainingCenterId: int,
+    name: string
+}
+
+entity role {
+    id: int <<generated>>,
+    name: string,
+}
+
+trainingCenter ..{ trainingCenterDiscipline
+discipline ..{ trainingCenterDiscipline
+activityArticle .up. article
+newsArticle .up. article
+member .. trainingCenter
+user ..{ member
+member .right. role
+article .. trainingCenter
+article .. member
+achievement .. user
+achievement .... trainingCenter
+
+@enduml

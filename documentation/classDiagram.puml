@@ -1,0 +1,71 @@
+@startuml classDiagram
+
+Practitioner --> Admin : could be
+Admin --> Article : can write (0...*)
+News --> Article : consists of (0...*)
+Practitioner --> TrainingCenter : subscribed to (1...*)
+TrainingCenter --> Discipline : practices (1...*)
+Discipline --> Activity : has (0...*)
+
+class Practitioner {
+__Properties__
+- bool admin
+- String name
+- String surname
+- enum grade
+- DateTime joinedDate
+'__Methods__
+}
+
+class TrainingCenter {
+__Properties__
+- String name
+- int Practitioners
+__Methods__
+- getPractitioners()
+- addPractitioner(Practitioner)
+- removePractitioner(Practitioner)
+}
+
+class Discipline {
+__Properties__
+- enum discipline
+- List<Activity>
+__Methods__
+- getActivities()
+- addActivity(Activity)
+- removeActivity(Activity)
+}
+
+class Activity {
+__Properties__
+- name
+- startDate
+- endDate
+- startTime
+- endTime
+- int Participating
+- String title
+- String body
+}
+
+class Admin
+
+class Article {
+__Properties__
+- String title
+- String body
+- image image
+- DateTime date
+}
+
+class News {
+__Properties__
+- List<Article>
+__Methods__
+- getArticles()
+- addArticle(Article)
+- removeArticle(Article)
+}
+
+@enduml
