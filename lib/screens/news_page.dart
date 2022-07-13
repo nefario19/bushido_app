@@ -10,10 +10,11 @@ class NewsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     //creating a list for testing purposes
     List<NewsItem> articles = [
-      NewsItem(titleText: 'MBO Utrecht geraakt door COVID', featured: true),
-      NewsItem(titleText: 'Blaam bij management voor uitbraak', featured: true),
-      NewsItem(titleText: 'Docent Taif Rahim wint Nobel', featured: false),
-      NewsItem(titleText: 'Dennis W jaloers op prijs Taif', featured: false),
+      NewsItem(titleText: 'Ambtenaar betrokken bij mafia praktijken', featured: true),
+      NewsItem(titleText: 'Ambtenaar Basam B hoofdverdachte', featured: false),
+      NewsItem(titleText: 'Basam B spijt van mokro opmerking', featured: false),
+      NewsItem(titleText: 'David S jaloers op prijs Taif', featured: false),
+      NewsItem(titleText: 'Rahim S ligt in de bajus', featured: false),
       NewsItem(
           titleText: 'Meer hier in over RTL Boulevart om 19.00 morgenavond',
           featured: false),
