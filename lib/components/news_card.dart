@@ -1,11 +1,11 @@
-import 'package:bushido_app/data/news_item.dart';
+import 'package:bushido_app/data/news_item_state_notifier.dart';
 import 'package:bushido_app/interfaces/card_factory.dart';
 import 'package:flutter/material.dart';
 
 class NewsCard implements CardFactory {
   @override
   Widget build(
-      {required List<NewsItem> articles,
+      {required List<NewsItemState> articles,
       required int index,
       required BuildContext context}) {
     return Card(

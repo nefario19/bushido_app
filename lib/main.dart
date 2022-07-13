@@ -1,5 +1,5 @@
 import 'package:bushido_app/constants.dart';
-import 'package:bushido_app/data/news_item.dart';
+import 'package:bushido_app/data/news_item_state_notifier.dart';
 import 'package:flutter/material.dart';
 import 'screens/landing_page.dart';
 

@@ -1,6 +1,6 @@
 import 'package:bushido_app/components/news_card.dart';
 import 'package:bushido_app/components/news_card_featured.dart';
-import 'package:bushido_app/data/news_item.dart';
+import 'package:bushido_app/data/news_item_state_notifier.dart';
 import 'package:flutter/material.dart';
 
 abstract class CardFactory {
@@ -12,5 +12,8 @@ abstract class CardFactory {
     }
   }
 
-  Widget build({required List<NewsItem> articles, required int index, required BuildContext context});
+  Widget build(
+      {required List<NewsItemState> articles,
+      required int index,
+      required BuildContext context});
 }
